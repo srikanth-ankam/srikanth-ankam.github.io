@@ -1,200 +1,321 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Ankam Srikanth | Portfolio</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Ankam Srikanth | Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-  <!-- Internal Styles for Stunning Look -->
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: linear-gradient(135deg, #111827, #1f2937);
-      color: #f3f4f6;
-    }
-    section.wrapper {
-      background: rgba(255,255,255,0.05);
-      padding: 4em 2em;
-      margin: 2em auto;
-      max-width: 960px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1s ease forwards;
-    }
-    @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
+    <style>
+        #academics:target ~ #intro,
+        #academics:target ~ #one,
+        #academics:target ~ #two,
+        #academics:target ~ #three,
+        #academics:target ~ #skills, /* Hide skills when academics is targeted */
+        #academics:target ~ #certifications { /* Hide certifications when academics is targeted */
+            display: none;
+        }
 
-    h1, h2, h3 { font-weight: 600; color: #38bdf8; margin-bottom: 0.5em; }
-    h2.major { font-size: 2em; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5em; }
-    p, ul li, span { font-weight: 300; line-height: 1.6; color: #d1d5db; }
-    ul.contact li h3 { color: #38bdf8; }
+        #academics {
+            display: none;
+        }
 
-    .button {
-      background-color: #38bdf8;
-      color: #1f2937 !important;
-      padding: 0.75em 1.5em;
-      border: none;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    .button:hover {
-      background-color: transparent;
-      color: #fb7185 !important;
-      border: 2px solid #fb7185;
-    }
-
-    #intro {
-      text-align: center;
-      padding: 8em 1em;
-      background: linear-gradient(135deg, #1f2937, #111827);
-    }
-    #intro h1 { font-size: 3rem; text-shadow: 0 0 10px #38bdf8; }
-    #intro p { font-size: 1.25rem; }
-
-    #footer {
-      background: #111827;
-      color: #9ca3af;
-      padding: 2em;
-      text-align: center;
-    }
-  </style>
+        #academics:target {
+            display: block !important;
+        }
+    </style>
 </head>
 <body class="is-preload">
 
-  <!-- Sidebar -->
-  <section id="sidebar">
-    <div class="inner">
-      <nav><ul>
-        <li><a href="#intro">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#academics">Academics</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul></nav>
+    <section id="sidebar">
+        <div class="inner">
+            <nav>
+                <ul>
+                    <li><a href="#intro">Welcome</a></li>
+                    <li><a href="#one">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#two">Projects</a></li>
+                    <li><a href="#three">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <div id="wrapper">
+
+        <section id="academics" class="wrapper style2 fade-up">
+            <div class="inner">
+                <h2>Academic Background</h2>
+                <ul>
+                    <li><strong>B.Tech in Computer Science Engineering</strong> – Malla Reddy College of Engineering & Technology (MRCET), Hyderabad
+                        <ul>
+                            <li>Final Year (2021–2025)</li>
+                            <li>Consistently ranked in the **Top 5%** of the class.</li>
+                            <li>Strong academic focus on **Artificial Intelligence, Web Development, and Data Structures & Algorithms**.</li>
+                            <li>CGPA (Till 4-1): **8.9/10**</li>
+                        </ul>
+                    </li>
+                    <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College
+                        <ul>
+                            <li>2019–2021</li>
+                            <li>Scored: **98%**</li>
+                        </ul>
+                    </li>
+                    <li><strong>SSC</strong> – ZPHS Wyra, Khammam
+                        <ul>
+                            <li>2018–2019</li>
+                            <li>GPA: **10/10**</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#one" class="button">Back to About Me</a>
+            </div>
+        </section>
+
+        <section id="intro" class="wrapper style1 fullscreen fade-up">
+            <div class="inner">
+                <h1>Ankam Srikanth</h1>
+                <p><strong>Full Stack Developer | Data Analyst | AI Enthusiast</strong></p>
+                <p>A passionate final-year Computer Science student, building innovative solutions and deriving insights from data.</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button scrolly">Learn More</a></li>
+                    <li><a href="#two" class="button scrolly">View Projects</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="one" class="wrapper style2 spotlights">
+            <section>
+                <a href="#" class="image"><img src="images/MYPHOTO121.jpg" alt="Ankam Srikanth Profile Picture" data-position="center center" /></a>
+                <div class="content">
+                    <div class="inner">
+                        <h2>About Me</h2>
+                        <p>I'm Ankam Srikanth, a dedicated and results-driven final-year CSE student at MRCET. I specialize in **full stack development** and **AI/ML projects**, always eager to solve real-world problems with technology. My foundation is built on **Python, Java, JavaScript, and SQL**, allowing me to craft efficient and scalable solutions across various domains. I'm passionate about working with data, developing robust APIs, and continually learning new technologies.</p>
+                        <ul class="actions">
+                            <li><a href="#academics" class="button">View Academic Info</a></li>
+                            <li><a href="#skills" class="button scrolly">View Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="skills" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Technical Skills</h2>
+                <p>A comprehensive overview of my proficiency across various technologies and domains.</p>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-code"></span>
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li><strong>Proficient:</strong> Python, Java, JavaScript, SQL</li>
+                            <li><strong>Familiar:</strong> C, C++</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-globe"></span>
+                        <h3>Web Technologies</h3>
+                        <ul>
+                            <li><strong>Frontend:</strong> HTML5, CSS3, React.js (learning)</li>
+                            <li><strong>Backend:</strong> Node.js (Express), RESTful APIs</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-brain"></span>
+                        <h3>AI & Machine Learning</h3>
+                        <ul>
+                            <li><strong>Libraries:</strong> TensorFlow, Keras, scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</li>
+                            <li><strong>Concepts:</strong> Supervised/Unsupervised Learning, Neural Networks, NLP (basics)</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-database"></span>
+                        <h3>Databases & Tools</h3>
+                        <ul>
+                            <li><strong>Databases:</strong> MySQL, PostgreSQL</li>
+                            <li><strong>Version Control:</strong> Git, GitHub</li>
+                            <li><strong>IDEs:</strong> VS Code, IntelliJ IDEA, Jupyter Notebook</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-cogs"></span>
+                        <h3>Core Concepts & Others</h3>
+                        <ul>
+                            <li>Data Structures & Algorithms (DSA)</li>
+                            <li>Object-Oriented Programming (OOP)</li>
+                            <li>Problem Solving</li>
+                            <li>Linux Environment</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-lightbulb"></span>
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Problem Solving</li>
+                            <li>Teamwork & Collaboration</li>
+                            <li>Communication</li>
+                            <li>Adaptability & Quick Learner</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="wrapper style2 fade-up">
+            <div class="inner">
+                <h2>Certifications & Achievements</h2>
+                <p>Evidence of continuous learning and recognition of my efforts.</p>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-award"></span>
+                        <h3>Academic Standing</h3>
+                        <p>Consistently ranked in the **Top 5%** of my class at MRCET, reflecting dedication to academic excellence.</p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-certificate"></span>
+                        <h3>Google Data Analytics Certificate (Coursera)</h3>
+                        <p>Completed comprehensive training in data cleaning, analysis, and visualization using SQL, Spreadsheets, and Tableau.
+                        <ul class="actions small">
+                            <li><a href="LINK_TO_GOOGLE_CERTIFICATE" class="button small" target="_blank">View Credential</a></li>
+                        </ul></p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-clipboard-list"></span>
+                        <h3>IBM AI Engineering Professional Certificate (Coursera)</h3>
+                        <p>A specialized program covering Deep Learning, Machine Learning, and deployment of AI models.
+                        <ul class="actions small">
+                            <li><a href="LINK_TO_IBM_CERTIFICATE" class="button small" target="_blank">View Credential</a></li>
+                        </ul></p>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-star"></span>
+                        <h3>Other Achievements & Interests</h3>
+                        <ul>
+                            <li>**Competitive Programming:** Actively participate in coding challenges on platforms like LeetCode and HackerRank.</li>
+                            <li>**Open-Source Contributions:** Exploring opportunities to contribute to open-source projects.</li>
+                            <li>**Tech Enthusiasm:** Constantly following new trends in AI, web development, and data science.</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="wrapper style3 fade-up">
+            <div class="inner">
+                <h2>Key Projects</h2>
+                <p>Showcasing a selection of projects that highlight my skills in AI, IoT, and data analysis.</p>
+                <div class="features">
+                    <section>
+                        <span class="icon solid major fa-chart-line"></span>
+                        <h3>Stock Price Prediction System</h3>
+                        <p>Developed an advanced system using **LSTM Neural Networks** (TensorFlow, Keras) for accurate stock market trend prediction. Integrated with **Streamlit** to provide a real-time, interactive web interface for live predictions and data visualization. Achieved high predictive accuracy on historical data.</p>
+                        <ul class="actions small">
+                            <li><a href="https://github.com/srikanth-ankam/Stock-Price-Prediction-System" class="button small icon brands fa-github" target="_blank">View on GitHub</a></li>
+                            </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-shield-alt"></span>
+                        <h3>IoT Bank Safety System</h3>
+                        <p>Designed and implemented an **Arduino-based IoT security system** for banks. Features include multi-factor authentication (fingerprint and OTP), real-time fire detection, and instant GSM alerts to authorities, significantly enhancing physical security protocols.</p>
+                        <ul class="actions small">
+                            <li><a href="https://github.com/srikanth-ankam/IoT-Bank-Safety-System" class="button small icon brands fa-github" target="_blank">View on GitHub</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-file-excel"></span>
+                        <h3>Excel-Based Sales Dashboard</h3>
+                        <p>Created a dynamic and automated data analysis and reporting dashboard using **Microsoft Excel** and **VBA (Visual Basic for Applications)**. This tool provides interactive visualizations of key performance indicators (KPIs) and facilitates efficient business decision-making through automated report generation.</p>
+                        <ul class="actions small">
+                            <li><a href="#" class="button small disabled">Private Project (No Link)</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <span class="icon solid major fa-code"></span>
+                        <h3>Other Projects & Learning</h3>
+                        <p>Continuously working on personal projects to expand my skillset in areas like full stack web development (MERN stack) and exploring advanced AI/ML concepts. Always keen to contribute to open-source initiatives.</p>
+                        <ul class="actions small">
+                            <li><a href="https://github.com/srikanth-ankam" class="button small icon brands fa-github" target="_blank">See All My Repos</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section id="three" class="wrapper style1 fade-up">
+            <div class="inner">
+                <h2>Get in Touch</h2>
+                <p>I'm always excited to connect with like-minded professionals, discuss new opportunities, or collaborate on innovative projects. Feel free to reach out!</p>
+                <div class="split style1">
+                    <section>
+                        <form method="POST" action="https://formspree.io/f/YOUR_FORMSPREE_ID"> <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" required />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="_replyto" id="email" required />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5" required></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><button type="submit" class="button submit">Send Message</button></li>
+                            </ul>
+                        </form>
+                    </section>
+                    <section>
+                        <ul class="contact">
+                            <li>
+                                <h3>Address</h3>
+                                <span>Rajashekar Nagar, Wyra<br />
+                                Khammam, Telangana 507165<br />
+                                India</span>
+                            </li>
+                            <li>
+                                <h3>Email</h3>
+                                <a href="mailto:ankam319@gmail.com">ankam319@gmail.com</a>
+                            </li>
+                            <li>
+                                <h3>Phone</h3>
+                                <span>(+91) 9347292507</span>
+                            </li>
+                            <li>
+                                <h3>Social</h3>
+                                <ul class="icons">
+                                    <li><a href="https://github.com/srikanth-ankam" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+                                    <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/" class="icon brands fa-linkedin-in" target="_blank"><span class="label">LinkedIn</span></a></li>
+                                    <li><a href="https://www.instagram.com/well_vsher_sreekanth/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
     </div>
-  </section>
 
-  <div id="wrapper">
-
-    <!-- Hero -->
-    <section id="intro" class="wrapper fullscreen">
-      <div class="inner">
-        <h1>Ankam Srikanth</h1>
-        <p>Full Stack Developer | Data Analyst | AI Enthusiast</p>
-        <a href="#about" class="button">Explore More</a>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="wrapper">
-      <div class="inner">
-        <h2 class="major">About Me</h2>
-        <p>I’m a final-year Computer Science student from MRCET, Hyderabad. I specialize in building full-stack web apps and AI-based solutions. Passionate about solving real-world problems using data and intelligent systems. I enjoy learning new technologies and thrive in collaborative environments.</p>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> Python, Java, C, JavaScript</li>
-          <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, React (Basics)</li>
-          <li><strong>Backend:</strong> Java (Servlets), Node.js (Basics), APIs</li>
-          <li><strong>Databases:</strong> MySQL, SQLite</li>
-          <li><strong>Tools:</strong> Excel (VBA), Git, VS Code, Jupyter Notebook</li>
-          <li><strong>Soft Skills:</strong> Communication, Teamwork, Leadership, Time Management</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Academics -->
-    <section id="academics" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Academic Background</h2>
-        <ul>
-          <li><strong>B.Tech in CSE</strong> – MRCET Hyderabad (2021–2025)
-            <ul>
-              <li>Top 5 in class · CGPA: <strong>8.9/10</strong></li>
-              <li>Focused on AI, Web Dev, and Data Structures</li>
+    <footer id="footer" class="wrapper style1-alt">
+        <div class="inner">
+            <ul class="menu">
+                <li>&copy; Ankam Srikanth. All rights reserved.</li><li>Design based on: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
             </ul>
-          </li>
-          <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya (2019–2021) – 98%</li>
-          <li><strong>SSC</strong> – ZPHS Wyra (2018–2019) – GPA: 10/10</li>
-        </ul>
-      </div>
-    </section>
+        </div>
+    </footer>
 
-    <!-- Projects -->
-    <section id="projects" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Projects</h2>
-        <ul>
-          <li><strong>Stock Price Prediction System</strong>  
-            <p>LSTM-based deep learning model to predict future stock trends. Integrated with Streamlit for user interaction and visualization.</p>
-          </li>
-          <li><strong>IoT Bank Safety System</strong>  
-            <p>Arduino + GSM-based system that uses fingerprint, OTP, and fire detection to ensure bank security with alert notifications.</p>
-          </li>
-          <li><strong>Excel Dashboard Automation</strong>  
-            <p>Built smart dashboards using Excel and VBA to visualize KPIs and generate automated reports.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
-    <!-- Certifications -->
-    <section id="certifications" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Certifications</h2>
-        <ul>
-          <li>Google Data Analytics Certificate – Coursera</li>
-          <li>Introduction to AI – NPTEL (IIT)</li>
-          <li>Java Full Stack Bootcamp – Internshala</li>
-          <li>Python for Everybody – University of Michigan (Coursera)</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="wrapper">
-      <div class="inner">
-        <h2 class="major">Get in Touch</h2>
-        <ul class="contact">
-          <li><h3>Address</h3><span>Rajashekar Nagar, Wyra<br>Khammam, Telangana 507165</span></li>
-          <li><h3>Email</h3><a href="mailto:ankam319@gmail.com">ankam319@gmail.com</a></li>
-          <li><h3>Phone</h3><span>(+91) 9347292507</span></li>
-          <li><h3>Social</h3>
-            <ul class="icons">
-              <li><a href="https://github.com/srikanth-ankam" class="icon brands fa-github">GitHub</a></li>
-              <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/" class="icon brands fa-linkedin-in">LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/well_vsher_sreekanth/" class="icon brands fa-instagram">Instagram</a></li>
-            </ul>
-          </li>
-        </ul>
-        <br>
-        <a href="Ankam_Srikanth_Resume.pdf" class="button" download>Download Resume</a>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2025 Ankam Srikanth. All rights reserved.</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
