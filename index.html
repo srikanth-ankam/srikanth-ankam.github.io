@@ -1,102 +1,200 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-    <title>Ankam Srikanth | Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-      body {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color: #f4f4f4;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-      h1, h2, h3 {
-        color: #00d9ff;
-      }
-      .wrapper {
-        background-color: rgba(255, 255, 255, 0.05);
-        border-radius: 10px;
-        margin: 2rem auto;
-        padding: 2rem;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
-      }
-      .button {
-        background: #00d9ff;
-        color: #000;
-        border: none;
-        border-radius: 5px;
-        padding: 0.75rem 1.5rem;
-        transition: 0.3s;
-      }
-      .button:hover {
-        background: #00aaff;
-        color: #fff;
-      }
-      .features section {
-        background-color: rgba(0, 0, 0, 0.3);
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
-      }
-      .inner {
-        max-width: 960px;
-        margin: auto;
-      }
-      a {
-        color: #00d9ff;
-      }
-      footer {
-        background-color: #111;
-        color: #888;
-        text-align: center;
-        padding: 2rem;
-      }
-    </style>
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
-  <body class="is-preload">
+<head>
+  <title>Ankam Srikanth | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Sidebar -->
-    <section id="sidebar">
+  <!-- Internal Styles for Stunning Look -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #f3f4f6;
+    }
+    section.wrapper {
+      background: rgba(255,255,255,0.05);
+      padding: 4em 2em;
+      margin: 2em auto;
+      max-width: 960px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1, h2, h3 { font-weight: 600; color: #38bdf8; margin-bottom: 0.5em; }
+    h2.major { font-size: 2em; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5em; }
+    p, ul li, span { font-weight: 300; line-height: 1.6; color: #d1d5db; }
+    ul.contact li h3 { color: #38bdf8; }
+
+    .button {
+      background-color: #38bdf8;
+      color: #1f2937 !important;
+      padding: 0.75em 1.5em;
+      border: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .button:hover {
+      background-color: transparent;
+      color: #fb7185 !important;
+      border: 2px solid #fb7185;
+    }
+
+    #intro {
+      text-align: center;
+      padding: 8em 1em;
+      background: linear-gradient(135deg, #1f2937, #111827);
+    }
+    #intro h1 { font-size: 3rem; text-shadow: 0 0 10px #38bdf8; }
+    #intro p { font-size: 1.25rem; }
+
+    #footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 2em;
+      text-align: center;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <nav><ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+    </div>
+  </section>
+
+  <div id="wrapper">
+
+    <!-- Hero -->
+    <section id="intro" class="wrapper fullscreen">
       <div class="inner">
-        <nav>
-          <ul>
-            <li><a href="#intro">Welcome</a></li>
-            <li><a href="#one">About Me</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#two">Projects</a></li>
-            <li><a href="#three">Contact</a></li>
-          </ul>
-        </nav>
+        <h1>Ankam Srikanth</h1>
+        <p>Full Stack Developer | Data Analyst | AI Enthusiast</p>
+        <a href="#about" class="button">Explore More</a>
       </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-      <!-- Content remains unchanged... (same structure with new styling applied) -->
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
+    <!-- About -->
+    <section id="about" class="wrapper">
       <div class="inner">
-        <ul class="menu">
-          <li>&copy; Ankam Srikanth. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        <h2 class="major">About Me</h2>
+        <p>I’m a final-year Computer Science student from MRCET, Hyderabad. I specialize in building full-stack web apps and AI-based solutions. Passionate about solving real-world problems using data and intelligent systems. I enjoy learning new technologies and thrive in collaborative environments.</p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Skills</h2>
+        <ul>
+          <li><strong>Languages:</strong> Python, Java, C, JavaScript</li>
+          <li><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, React (Basics)</li>
+          <li><strong>Backend:</strong> Java (Servlets), Node.js (Basics), APIs</li>
+          <li><strong>Databases:</strong> MySQL, SQLite</li>
+          <li><strong>Tools:</strong> Excel (VBA), Git, VS Code, Jupyter Notebook</li>
+          <li><strong>Soft Skills:</strong> Communication, Teamwork, Leadership, Time Management</li>
         </ul>
       </div>
-    </footer>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Academics -->
+    <section id="academics" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Academic Background</h2>
+        <ul>
+          <li><strong>B.Tech in CSE</strong> – MRCET Hyderabad (2021–2025)
+            <ul>
+              <li>Top 5 in class · CGPA: <strong>8.9/10</strong></li>
+              <li>Focused on AI, Web Dev, and Data Structures</li>
+            </ul>
+          </li>
+          <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya (2019–2021) – 98%</li>
+          <li><strong>SSC</strong> – ZPHS Wyra (2018–2019) – GPA: 10/10</li>
+        </ul>
+      </div>
+    </section>
 
-  </body>
+    <!-- Projects -->
+    <section id="projects" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Projects</h2>
+        <ul>
+          <li><strong>Stock Price Prediction System</strong>  
+            <p>LSTM-based deep learning model to predict future stock trends. Integrated with Streamlit for user interaction and visualization.</p>
+          </li>
+          <li><strong>IoT Bank Safety System</strong>  
+            <p>Arduino + GSM-based system that uses fingerprint, OTP, and fire detection to ensure bank security with alert notifications.</p>
+          </li>
+          <li><strong>Excel Dashboard Automation</strong>  
+            <p>Built smart dashboards using Excel and VBA to visualize KPIs and generate automated reports.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Certifications</h2>
+        <ul>
+          <li>Google Data Analytics Certificate – Coursera</li>
+          <li>Introduction to AI – NPTEL (IIT)</li>
+          <li>Java Full Stack Bootcamp – Internshala</li>
+          <li>Python for Everybody – University of Michigan (Coursera)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Get in Touch</h2>
+        <ul class="contact">
+          <li><h3>Address</h3><span>Rajashekar Nagar, Wyra<br>Khammam, Telangana 507165</span></li>
+          <li><h3>Email</h3><a href="mailto:ankam319@gmail.com">ankam319@gmail.com</a></li>
+          <li><h3>Phone</h3><span>(+91) 9347292507</span></li>
+          <li><h3>Social</h3>
+            <ul class="icons">
+              <li><a href="https://github.com/srikanth-ankam" class="icon brands fa-github">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/" class="icon brands fa-linkedin-in">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/well_vsher_sreekanth/" class="icon brands fa-instagram">Instagram</a></li>
+            </ul>
+          </li>
+        </ul>
+        <br>
+        <a href="Ankam_Srikanth_Resume.pdf" class="button" download>Download Resume</a>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>&copy; 2025 Ankam Srikanth. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
