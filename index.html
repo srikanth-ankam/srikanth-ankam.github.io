@@ -7,9 +7,102 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <!-- Pure CSS Targeting -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
     <style>
-        /* Hide all sections when academics is targeted */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(ellipse at top, #1a1a2e 0%, #0e0e2c 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: #00fff2;
+        }
+
+        p {
+            font-weight: 300;
+            line-height: 1.7;
+            color: #d1d1d1;
+        }
+
+        .button {
+            background-color: #00fff2;
+            color: #0e0e2c !important;
+            border: none;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: transparent;
+            color: #00fff2 !important;
+            border: 2px solid #00fff2;
+        }
+
+        section.wrapper {
+            padding: 5em 2em;
+            border-radius: 20px;
+            margin: 1em;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #intro {
+            background: linear-gradient(135deg, #0e0e2c 60%, #1b1b3a 100%);
+            text-align: center;
+            padding-top: 6em;
+        }
+
+        #intro h1 {
+            font-size: 3em;
+            text-shadow: 0 0 10px #00fff2;
+        }
+
+        .icon.major {
+            background-color: #00fff2;
+            color: #0e0e2c;
+        }
+
+        a {
+            color: #00fff2;
+        }
+
+        ul.contact li h3 {
+            color: #00fff2;
+        }
+
+        #footer {
+            background-color: #0a0a1a;
+            color: #aaaaaa;
+            font-size: 0.9em;
+            padding: 2em 0;
+        }
+
+        h2.major {
+            font-size: 2.2em;
+            text-transform: uppercase;
+            border-bottom: 2px solid #00fff2;
+            display: inline-block;
+            padding-bottom: 0.4em;
+            margin-bottom: 1.5em;
+        }
+
+        /* Section toggle using :target */
         #academics:target ~ #intro,
         #academics:target ~ #one,
         #academics:target ~ #two,
@@ -45,32 +138,33 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Academic Info First (needed for CSS targeting to work correctly) -->
+        <!-- Academic Info First (so it can hide others via CSS :target) -->
         <section id="academics" class="wrapper style2 fade-up" style="display: none;">
             <div class="inner">
-                <h2>Academic Background</h2>
+                <h2 class="major">Academic Background</h2>
                 <ul>
                     <li><strong>B.Tech in Computer Science Engineering</strong> – Malla Reddy College of Engineering & Technology (MRCET), Hyderabad
                         <ul>
                             <li>Final Year (2021–2025)</li>
-                            
-                            <li>Strong focus on AI, Web Development, Data Structures</li>
-                            <li>CGPA: <strong>8.81/10</strong></li>
+                            <li>Top 5 in class</li>
+                            <li>Focus: AI, Web Dev, Data Structures</li>
+                            <li>CGPA (Till 4-1): <strong>8.9/10</strong></li>
                         </ul>
                     </li>
-                    <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College, Khammam
+                    <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College
                         <ul>
                             <li>2019–2021</li>
                             <li>Scored: 98%</li>
                         </ul>
                     </li>
-                    <li><strong>SSC</strong> – Vani Vivekananda Vidyalayam, Wyra, Khammam
+                    <li><strong>SSC</strong> – ZPHS Wyra, Khammam
                         <ul>
                             <li>2018–2019</li>
-                            <li>CGPA: 10/10</li>
+                            <li>GPA: 10/10</li>
                         </ul>
                     </li>
                 </ul>
+                <br>
                 <a href="#" class="button">Back to Full View</a>
             </div>
         </section>
@@ -92,8 +186,8 @@
                 <a href="#" class="image"><img src="images/MYPHOTO121.jpg" alt="" data-position="center center" /></a>
                 <div class="content">
                     <div class="inner">
-                        <h2>About Me</h2>
-                        <p>I'm Ankam Srikanth, a passionate final-year CSE student at MRCET. I specialize in full stack development and AI/ML projects. I enjoy solving real-world problems with technology. I'm proficient in Python, Java, JavaScript, SQL, and enjoy working with data and APIs to create efficient and scalable solutions.</p>
+                        <h2 class="major">About Me</h2>
+                        <p>I'm Ankam Srikanth, a final-year CSE student at MRCET. I specialize in full stack development and AI/ML. I love building tech that solves real-world problems using Python, Java, JS, SQL, and APIs.</p>
                         <ul class="actions">
                             <li><a href="#academics" class="button">View Academic Info</a></li>
                         </ul>
@@ -105,23 +199,23 @@
         <!-- Projects -->
         <section id="two" class="wrapper style3 fade-up">
             <div class="inner">
-                <h2>Projects</h2>
-                <p>Here are some of the key projects I've worked on during my academic journey:</p>
+                <h2 class="major">Projects</h2>
+                <p>Key projects built with real-world impact during my academic journey:</p>
                 <div class="features">
                     <section>
                         <span class="icon solid major fa-lock"></span>
-                        <h3>Stock Price Prediction System</h3>
-                        <p>Developed using LSTM neural networks to predict stock market trends. Integrated with Streamlit for live predictions.</p>
+                        <h3>Stock Price Prediction</h3>
+                        <p>LSTM-based system predicting stock trends with a Streamlit web interface for live forecasts.</p>
                     </section>
                     <section>
                         <span class="icon solid major fa-cog"></span>
                         <h3>IoT Bank Safety System</h3>
-                        <p>Arduino-based system with fingerprint and OTP authentication, fire detection, and GSM alert integration for enhanced bank security.</p>
+                        <p>Security system with fingerprint/OTP, fire detection, and GSM alerts using Arduino.</p>
                     </section>
                     <section>
                         <span class="icon solid major fa-chart-bar"></span>
                         <h3>Excel-Based Dashboard</h3>
-                        <p>Designed an automated data analysis and reporting dashboard using Excel and VBA for visualizing KPIs.</p>
+                        <p>Automated KPI dashboards with Excel + VBA for visual analytics and reporting.</p>
                     </section>
                 </div>
                 <ul class="actions">
@@ -130,11 +224,11 @@
             </div>
         </section>
 
-        <!-- Get in Touch -->
+        <!-- Contact -->
         <section id="three" class="wrapper style1 fade-up">
             <div class="inner">
-                <h2>Get in Touch</h2>
-                <p>Feel free to reach out for collaboration, project discussion, or any opportunities. I'm always excited to connect with like-minded professionals!</p>
+                <h2 class="major">Get in Touch</h2>
+                <p>Feel free to reach out for collaboration, projects, or just to say hi. I’d love to connect!</p>
                 <div class="split style1">
                     <section>
                         <form method="post" action="#">
@@ -161,9 +255,7 @@
                         <ul class="contact">
                             <li>
                                 <h3>Address</h3>
-                                <span>Rajashekar Nagar, Wyra<br />
-                                Khammam, Telangana 507165<br />
-                                India</span>
+                                <span>Rajashekar Nagar, Wyra<br />Khammam, Telangana 507165<br />India</span>
                             </li>
                             <li>
                                 <h3>Email</h3>
@@ -179,7 +271,7 @@
                                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                                     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                                     <li><a href="https://github.com/srikanth-ankam" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="https://www.instagram.com/well_vsher_sreekanth/?next=%2F&hl=en" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                                    <li><a href="https://www.instagram.com/well_vsher_sreekanth/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
                                     <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
                                 </ul>
                             </li>
@@ -195,7 +287,8 @@
     <footer id="footer" class="wrapper style1-alt">
         <div class="inner">
             <ul class="menu">
-                <li>&copy; Ankam Srikanth. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                <li>&copy; Ankam Srikanth. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
         </div>
     </footer>
