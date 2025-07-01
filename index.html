@@ -1,306 +1,238 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Ankam Srikanth | Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <title>Ankam Srikanth | Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: radial-gradient(ellipse at top, #1a1a2e 0%, #0e0e2c 100%);
-            color: #ffffff;
-            overflow-x: hidden;
-        }
+  <!-- Custom CSS -->
+  <style>
+    /* 1. Base & Section Styling */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      color: #f3f4f6;
+    }
+    section.wrapper {
+      background: rgba(255,255,255,0.05);
+      padding: 4em 2em;
+      margin: 2em auto;
+      max-width: 960px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        h1, h2, h3 {
-            font-weight: 600;
-            color: #00fff2;
-        }
+    /* 2. Headers & Typography */
+    h1, h2, h3 { font-weight: 600; color: #38bdf8; margin-bottom: 0.5em; }
+    h2.major { font-size: 2em; border-bottom: 2px solid #38bdf8; padding-bottom: 0.5em; }
+    p, ul li, span { font-weight: 300; line-height: 1.6; color: #d1d5db; }
+    ul.contact li h3 { color: #38bdf8; }
 
-        p {
-            font-weight: 300;
-            line-height: 1.7;
-            color: #d1d1d1;
-        }
+    /* 3. Accent & Hover Effects */
+    .button {
+      display: inline-block;
+      background-color: #38bdf8;
+      color: #1f2937 !important;
+      font-weight: 500;
+      padding: 0.75em 1.5em;
+      border: none;
+      border-radius: 8px;
+      transition: background 0.3s, border 0.3s;
+    }
+    .button:hover {
+      background-color: #1f2937;
+      color: #fb7185 !important;
+      border: 2px solid #fb7185;
+    }
 
-        .button {
-            background-color: #00fff2;
-            color: #0e0e2c !important;
-            border: none;
-            font-weight: bold;
-            transition: all 0.3s ease-in-out;
-        }
+    /* 4. Hero Styles */
+    #intro {
+      text-align: center;
+      padding: 8em 1em;
+      margin: 0;
+      background: linear-gradient(135deg, #1f2937, #111827);
+      border-radius: 0;
+    }
+    #intro h1 { font-size: 3rem; text-shadow: 0 0 10px #38bdf8; }
+    #intro p { font-size: 1.25rem; }
 
-        .button:hover {
-            background-color: transparent;
-            color: #00fff2 !important;
-            border: 2px solid #00fff2;
-        }
+    /* 5. Icons */
+    .icon.major {
+      background-color: #fb7185;
+      color: #1f2937;
+      font-size: 1.5rem;
+    }
 
-        section.wrapper {
-            padding: 5em 2em;
-            border-radius: 20px;
-            margin: 1em;
-            background: rgba(255, 255, 255, 0.05);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        #intro {
-            background: linear-gradient(135deg, #0e0e2c 60%, #1b1b3a 100%);
-            text-align: center;
-            padding-top: 6em;
-        }
-
-        #intro h1 {
-            font-size: 3em;
-            text-shadow: 0 0 10px #00fff2;
-        }
-
-        .icon.major {
-            background-color: #00fff2;
-            color: #0e0e2c;
-        }
-
-        a {
-            color: #00fff2;
-        }
-
-        ul.contact li h3 {
-            color: #00fff2;
-        }
-
-        #footer {
-            background-color: #0a0a1a;
-            color: #aaaaaa;
-            font-size: 0.9em;
-            padding: 2em 0;
-        }
-
-        h2.major {
-            font-size: 2.2em;
-            text-transform: uppercase;
-            border-bottom: 2px solid #00fff2;
-            display: inline-block;
-            padding-bottom: 0.4em;
-            margin-bottom: 1.5em;
-        }
-
-        /* Section toggle using :target */
-        #academics:target ~ #intro,
-        #academics:target ~ #one,
-        #academics:target ~ #two,
-        #academics:target ~ #three {
-            display: none;
-        }
-
-        #academics {
-            display: none;
-        }
-
-        #academics:target {
-            display: block !important;
-        }
-    </style>
+    /* 6. Footer */
+    #footer {
+      text-align: center;
+      padding: 2em 1em;
+      background: #111827;
+      color: #9ca3af;
+    }
+    #footer a { color: #38bdf8; }
+    
+    /* 7. Pure CSS toggle for academic content */
+    #academics:target ~ #intro,
+    #academics:target ~ #one,
+    #academics:target ~ #two,
+    #academics:target ~ #three {
+      display: none;
+    }
+    #academics { display: none; }
+    #academics:target { display: block; }
+  </style>
 </head>
+
 <body class="is-preload">
 
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="#intro">Welcome</a></li>
-                    <li><a href="#one">About Me</a></li>
-                    <li><a href="#two">Projects</a></li>
-                    <li><a href="#three">Get in Touch</a></li>
-                </ul>
-            </nav>
-        </div>
+  <!-- Sidebar Navigation -->
+  <section id="sidebar">
+    <div class="inner">
+      <nav><ul>
+        <li><a href="#intro">Welcome</a></li>
+        <li><a href="#one">About</a></li>
+        <li><a href="#two">Projects</a></li>
+        <li><a href="#three">Get in Touch</a></li>
+      </ul></nav>
+    </div>
+  </section>
+
+  <!-- Content Wrapper -->
+  <div id="wrapper">
+
+    <!-- Academic Section (hidden by default) -->
+    <section id="academics" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Academic Background</h2>
+        <ul>
+          <li><strong>B.Tech in CSE</strong> – MRCET Hyderabad (2021–2025)  
+            <ul>
+              <li>Top 5 in class · CGPA 8.9/10</li>
+              <li>Focus: AI, Web Dev, Data Structures</li>
+            </ul>
+          </li>
+          <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya JC (2019–2021) · 98%</li>
+          <li><strong>SSC</strong> – ZPHS Wyra (2018–2019) · GPA 10/10</li>
+        </ul>
+        <a href="#" class="button">Back to Full View</a>
+      </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+    <!-- Intro Hero -->
+    <section id="intro" class="wrapper style1 fullscreen">
+      <div class="inner">
+        <h1>Ankam Srikanth</h1>
+        <p>Full Stack Developer · Data Analyst · AI Enthusiast</p>
+        <ul class="actions">
+          <li><a href="#one" class="button scrolly">Learn More</a></li>
+        </ul>
+      </div>
+    </section>
 
-        <!-- Academic Info First (so it can hide others via CSS :target) -->
-        <section id="academics" class="wrapper style2 fade-up" style="display: none;">
-            <div class="inner">
-                <h2 class="major">Academic Background</h2>
-                <ul>
-                    <li><strong>B.Tech in Computer Science Engineering</strong> – Malla Reddy College of Engineering & Technology (MRCET), Hyderabad
-                        <ul>
-                            <li>Final Year (2021–2025)</li>
-                            <li>Top 5 in class</li>
-                            <li>Focus: AI, Web Dev, Data Structures</li>
-                            <li>CGPA (Till 4-1): <strong>8.9/10</strong></li>
-                        </ul>
-                    </li>
-                    <li><strong>Intermediate (MPC)</strong> – Sri Chaitanya Junior College
-                        <ul>
-                            <li>2019–2021</li>
-                            <li>Scored: 98%</li>
-                        </ul>
-                    </li>
-                    <li><strong>SSC</strong> – ZPHS Wyra, Khammam
-                        <ul>
-                            <li>2018–2019</li>
-                            <li>GPA: 10/10</li>
-                        </ul>
-                    </li>
-                </ul>
-                <br>
-                <a href="#" class="button">Back to Full View</a>
-            </div>
-        </section>
-
-        <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up">
-            <div class="inner">
-                <h1>Ankam Srikanth</h1>
-                <p>Full Stack Developer | Data Analyst | AI Enthusiast</p>
-                <ul class="actions">
-                    <li><a href="#one" class="button scrolly">Learn more</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- About Me -->
-        <section id="one" class="wrapper style2 spotlights">
-            <section>
-                <a href="#" class="image"><img src="images/MYPHOTO121.jpg" alt="" data-position="center center" /></a>
-                <div class="content">
-                    <div class="inner">
-                        <h2 class="major">About Me</h2>
-                        <p>I'm Ankam Srikanth, a final-year CSE student at MRCET. I specialize in full stack development and AI/ML. I love building tech that solves real-world problems using Python, Java, JS, SQL, and APIs.</p>
-                        <ul class="actions">
-                            <li><a href="#academics" class="button">View Academic Info</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </section>
-
-        <!-- Projects -->
-        <section id="two" class="wrapper style3 fade-up">
-            <div class="inner">
-                <h2 class="major">Projects</h2>
-                <p>Key projects built with real-world impact during my academic journey:</p>
-                <div class="features">
-                    <section>
-                        <span class="icon solid major fa-lock"></span>
-                        <h3>Stock Price Prediction</h3>
-                        <p>LSTM-based system predicting stock trends with a Streamlit web interface for live forecasts.</p>
-                    </section>
-                    <section>
-                        <span class="icon solid major fa-cog"></span>
-                        <h3>IoT Bank Safety System</h3>
-                        <p>Security system with fingerprint/OTP, fire detection, and GSM alerts using Arduino.</p>
-                    </section>
-                    <section>
-                        <span class="icon solid major fa-chart-bar"></span>
-                        <h3>Excel-Based Dashboard</h3>
-                        <p>Automated KPI dashboards with Excel + VBA for visual analytics and reporting.</p>
-                    </section>
-                </div>
-                <ul class="actions">
-                    <li><a href="Ankam_Srikanth_Resume.pdf" class="button" download>Download Resume</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Contact -->
-        <section id="three" class="wrapper style1 fade-up">
-            <div class="inner">
-                <h2 class="major">Get in Touch</h2>
-                <p>Feel free to reach out for collaboration, projects, or just to say hi. I’d love to connect!</p>
-                <div class="split style1">
-                    <section>
-                        <form method="post" action="#">
-                            <div class="fields">
-                                <div class="field half">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" />
-                                </div>
-                                <div class="field half">
-                                    <label for="email">Email</label>
-                                    <input type="text" name="email" id="email" />
-                                </div>
-                                <div class="field">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" rows="5"></textarea>
-                                </div>
-                            </div>
-                            <ul class="actions">
-                                <li><a href="#" class="button submit">Send Message</a></li>
-                            </ul>
-                        </form>
-                    </section>
-                    <section>
-                        <ul class="contact">
-                            <li>
-                                <h3>Address</h3>
-                                <span>Rajashekar Nagar, Wyra<br />Khammam, Telangana 507165<br />India</span>
-                            </li>
-                            <li>
-                                <h3>Email</h3>
-                                <a href="mailto:ankam319@gmail.com">ankam319@gmail.com</a>
-                            </li>
-                            <li>
-                                <h3>Phone</h3>
-                                <span>(+91) 9347292507</span>
-                            </li>
-                            <li>
-                                <h3>Social</h3>
-                                <ul class="icons">
-                                    <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                    <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                    <li><a href="https://github.com/srikanth-ankam" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                    <li><a href="https://www.instagram.com/well_vsher_sreekanth/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                    <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </section>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Ankam Srikanth. All rights reserved.</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
+    <!-- About Me Section -->
+    <section id="one" class="wrapper">
+      <div class="inner">
+        <h2 class="major">About Me</h2>
+        <div style="display:flex;gap:2em; align-items:center; flex-wrap:wrap;">
+          <img src="images/MYPHOTO121.jpg" alt="Srikanth" style="flex:1 1 250px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.5);" />
+          <div style="flex:2 1 300px;">
+            <p>I'm Ankam Srikanth, a final-year CSE student at MRCET with a passion for full‑stack development and AI/ML. I love building tech solutions using Python, Java, JavaScript, SQL, and APIs.</p>
+            <a href="#academics" class="button">View Academic Info</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!-- Projects -->
+    <section id="two" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Projects</h2>
+        <p>Here's a preview of my key projects:</p>
+        <div class="features" style="display:flex; gap:1.5em; flex-wrap:wrap;">
+          <section style="flex:1 1 250px;">
+            <span class="icon major fa-lock"></span>
+            <h3>Stock Price Prediction</h3>
+            <p>LSTM + Streamlit web UI for live stock forecasting.</p>
+          </section>
+          <section style="flex:1 1 250px;">
+            <span class="icon major fa-cog"></span>
+            <h3>IoT Bank Security</h3>
+            <p>Arduino-based system with fingerprint, OTP, fire alerts & GSM integration.</p>
+          </section>
+          <section style="flex:1 1 250px;">
+            <span class="icon major fa-chart-bar"></span>
+            <h3>Excel Dashboard</h3>
+            <p>Automated KPI dashboards using Excel & VBA for analytics & reporting.</p>
+          </section>
+        </div>
+        <ul class="actions">
+          <li><a href="Ankam_Srikanth_Resume.pdf" class="button" download>Download Resume</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="three" class="wrapper">
+      <div class="inner">
+        <h2 class="major">Get in Touch</h2>
+        <p>I'd love to connect—I'm open to collaborations, projects, or just meeting new people!</p>
+        <div class="split style1">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half"><label>Name</label><input type="text" name="name" /></div>
+                <div class="field half"><label>Email</label><input type="email" name="email" /></div>
+                <div class="field"><label>Message</label><textarea name="message" rows="4"></textarea></div>
+              </div>
+              <ul class="actions"><li><a href="#" class="button submit">Send Message</a></li></ul>
+            </form>
+          </section>
+          <section>
+            <ul class="contact">
+              <li><h3>Address</h3><span>Rajashekar Nagar, Wyra<br>Khammam, Telangana 507165</span></li>
+              <li><h3>Email</h3><a href="mailto:ankam319@gmail.com">ankam319@gmail.com</a></li>
+              <li><h3>Phone</h3><span>(+91) 9347292507</span></li>
+              <li><h3>Social</h3><ul class="icons">
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://github.com/srikanth-ankam"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/well_vsher_sreekanth/"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/ankam-srikanth-data-analyst/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+              </ul></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="inner">
+      <p>&copy; Ankam Srikanth. All rights reserved. Design powered by HTML5 UP.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
