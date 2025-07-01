@@ -8,18 +8,17 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
-        /* Hide all sections when academics is targeted */
         #academics:target ~ #intro,
         #academics:target ~ #one,
-        #academics:target ~ #skills,
-        #academics:target ~ #certifications,
         #academics:target ~ #two,
-        #academics:target ~ #three {
+        #academics:target ~ #three,
+        #academics:target ~ #skills, /* Hide skills when academics is targeted */
+        #academics:target ~ #certifications { /* Hide certifications when academics is targeted */
             display: none;
         }
 
         #academics {
-            display: none; /* Keep academics hidden by default */
+            display: none;
         }
 
         #academics:target {
@@ -82,7 +81,7 @@
                 <p>A passionate final-year Computer Science student, building innovative solutions and deriving insights from data.</p>
                 <ul class="actions">
                     <li><a href="#one" class="button scrolly">Learn More</a></li>
-                    <li><a href="#two" class="button scrolly primary">View Projects</a></li>
+                    <li><a href="#two" class="button scrolly">View Projects</a></li>
                 </ul>
             </div>
         </section>
