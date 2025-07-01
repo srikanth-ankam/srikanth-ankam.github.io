@@ -8,17 +8,18 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
+        /* Hide all sections when academics is targeted */
         #academics:target ~ #intro,
         #academics:target ~ #one,
+        #academics:target ~ #skills,
+        #academics:target ~ #certifications,
         #academics:target ~ #two,
-        #academics:target ~ #three,
-        #academics:target ~ #skills, /* Hide skills when academics is targeted */
-        #academics:target ~ #certifications { /* Hide certifications when academics is targeted */
+        #academics:target ~ #three {
             display: none;
         }
 
         #academics {
-            display: none;
+            display: none; /* Keep academics hidden by default */
         }
 
         #academics:target {
